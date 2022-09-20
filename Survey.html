@@ -1,0 +1,468 @@
+
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>Survey</title><link rel="stylesheet" href="/new_static/css/layui.css"><!--[if lt IE 9]><script src="/new_static/js/html5.min.js"></script><script src="/new_static/js/respond.min.js"></script><![endif]--><style>
+        @media screen and (max-width: 767px) {
+            .address-input {
+                text-align: left !important;
+            }
+        }
+
+        .imageName {
+            border: none;
+            cursor: default;
+            margin-left: 15px;
+            max-width: 260px;
+            height: 30px;
+            color: #009688;
+        }
+
+        .giftBox {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #009688 !important;
+        }
+
+        .giftBox i {
+            display: block;
+            position: absolute;
+            border-bottom: 30px solid #009688;
+            border-left: 30px solid transparent;
+            width: 0px;
+            height: 0px;
+            bottom: 0rem;
+            right: 0;
+        }
+
+        .giftBox i:after {
+            position: absolute;
+            content: '\2714';
+            color: white;
+            left: -15px;
+            top: 13px;
+            font-size: 0.8rem;
+        }
+
+        .gift-img {
+            text-align: center;
+            padding: 0 10px;
+            margin-bottom: 15px;
+            color: #666;
+            font-size: 12px;
+        }
+
+        .gift-img img {
+            width: 100%;
+          
+        }
+
+        .gift-img a:hover {
+            border-color: #ababab;
+        }
+
+        .thumbnail {
+            display: block;
+            padding: 4px;
+            margin-bottom: 5px;
+            line-height: 1.42857143;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            -webkit-transition: border .2s ease-in-out;
+            -o-transition: border .2s ease-in-out;
+            transition: border .2s ease-in-out;
+        }
+
+        .address-input {
+            height: 38px;
+            line-height: 38px;
+            text-align: right;
+            padding-right: 15px;
+        }
+
+        h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .site-title {
+            margin: 30px 0 20px;
+        }
+
+        .site-title fieldset {
+            border: none;
+            padding: 0;
+            border-top: 1px solid #eee;
+        }
+
+        .site-title fieldset legend {
+            margin-left: 20px;
+            padding: 0 10px;
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        .layui-elem-quote a {
+            color: darkblue;
+            text-decoration: none;
+        }
+
+        .layui-elem-quote a:hover {
+            text-decoration: underline;
+        }
+
+        .img-thumbnail {
+            display: inline-block;
+            max-width: 100%;
+            height: auto;
+            line-height: 1.42857143;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            -webkit-transition: all .2s ease-in-out;
+            -o-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+		
+		
+		.group-header {
+    color: #409eff;
+    padding-right: 10px;
+    font-size: 18px;
+}
+
+.avue-group__header {
+    width: 100%;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    line-height: 50px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #eee;
+}
+.avue-group__header, .avue-tree__filter {
+    display: -ms-flexbox;
+}
+
+.el-collapse-item.is-disabled .el-collapse-item__header {
+    color: #000;
+    cursor: not-allowed;
+}
+.avue-group .el-collapse-item__header {
+    height: inherit;
+    border: none;
+}
+
+.el-collapse-item__header {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    background-color: #fff;
+    color: #303133;
+    cursor: pointer;
+    border-bottom: 1px solid #ebeef5;
+    font-size: 13px;
+    font-weight: 500;
+    transition: border-bottom-color .3s;
+    outline: 0;
+}
+.avue-form__item--top .el-form-item__label {
+    width: 100% !important;
+    font-weight: bold;
+    text-align: left !important;
+}
+.el-form-item--medium .el-form-item__content, .el-form-item--medium .el-form-item__label {
+    line-height: 36px;
+}
+.el-form-item__label {
+    text-align: right;
+    vertical-align: middle;
+    float: left;
+    font-size: 14px;
+    color: #606266;
+    line-height: 40px;
+    padding: 0 12px 0 0;
+    box-sizing: border-box;
+}
+
+
+.el-collapse-item__content {
+    font-size: 13px;
+    color: #303133;
+    line-height: 1.769230769230769;
+}
+
+
+.avue-form__group--flex {
+    display: flex;
+}
+.avue-form__group {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: auto;
+}
+
+.avue-group .el-collapse-item__content {
+    padding-bottom: 0;
+}
+.el-collapse-item__content {
+    padding-bottom: 25px;
+    font-size: 13px;
+    color: #303133;
+    line-height: 1.769230769230769;
+}
+
+.avue-group .el-collapse, .avue-group .el-collapse-item__wrap {
+    border-color: #fff;
+}
+.el-collapse-item__wrap {
+    will-change: height;
+    background-color: #fff;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ebeef5;
+        border-bottom-color: rgb(235, 238, 245);
+}
+
+.el-input--medium {
+    font-size: 14px;
+}
+
+
+
+
+.layui-form-radio > i {
+    margin-right: 8px;
+    font-size: 14px;
+    color: #c2c2c2;
+}
+
+.avue-form__item--top .el-form-item__label {
+    width: 100% !important;
+    font-weight: bold;
+    text-align: left !important;
+}
+
+
+.avue-form .el-input__inner {
+    height: 38px;
+    line-height: 38px;
+}
+
+.el-input--suffix .el-input__inner {
+    padding-right: 30px;
+}
+.el-input__inner {
+    -webkit-appearance: none;
+    background-color: #fff;
+    background-image: none;
+    border-radius: 4px;
+    border: 1px solid #dcdfe6;
+    box-sizing: border-box;
+    color: #606266;
+    display: inline-block;
+    font-size: inherit;
+    height: 40px;
+    line-height: 40px;
+    outline: 0;
+    padding: 0 15px;
+        padding-right: 15px;
+    transition: border-color .2s cubic-bezier(.645, .045, .355, 1);
+    width: 50%;
+}
+
+
+.el-input--medium {
+    font-size: 14px;
+}
+.el-input {
+    position: relative;
+    font-size: 14px;
+    display: inline-block;
+    width: 100%;
+}
+
+    </style><link rel="stylesheet" href="/new_static/css/layui.css"></head><body><div class="layui-container"><div class="layui-row" style="max-width:1000px;min-width:300px;margin: 0 auto 30px auto;"><div class="layui-col-xs12"><div class="site-title" style="text-align:center"><img src="/ymx.jpg" /></div><form class="layui-form" method="POST"><div class="layui-col-xs6 layui-col-sm4 layui-col-md3 gift-img"><a href="javascript:void(0);" class="thumbnail selectImg" data-choose-val="70113373072688"
+                           data-gift-remarks="Review with Product Picture"><img src="http://cs.yk-all.com/upload/cabacccea878dda7/422678ab1081e4ca.png" title="10&euro; Gift Card" alt="Loading..."><i></i></a><label>10&euro; Gift Card</label></div><div class="layui-col-xs6 layui-col-sm4 layui-col-md3 gift-img"><a href="javascript:void(0);" class="thumbnail selectImg" data-choose-val="70113365536470"
+                           data-gift-remarks="Review with Product Text"><img src="http://cs.yk-all.com/upload/937e0efba8f60e8f/3074919c9f7db49e.png" title="5&euro; Gift Card" alt="Loading..."><i></i></a><label>5&euro; Gift Card</label></div><div class="layui-col-xs6 layui-col-sm4 layui-col-md3 gift-img"><a href="javascript:void(0);" class="thumbnail selectImg" data-choose-val="70113350960189"
+                           data-gift-remarks="Review with Product Picture"><img src="http://cs.yk-all.com/upload/3e7352ac922cf9b3/344b6e84aac30ccc.jpg" title="Wireless charging" alt="Loading..."><i></i></a><label>Wireless charging</label></div><div class="layui-col-xs6 layui-col-sm4 layui-col-md3 gift-img"><a href="javascript:void(0);" class="thumbnail selectImg" data-choose-val="70113342220630"
+                           data-gift-remarks="Review with Product Picture"><img src="http://cs.yk-all.com/upload/14921352d6c2b8a2/0af44af6b951529a.jpg" title="Humidifier" alt="Loading..."><i></i></a><label>Humidifier</label></div><div class="layui-col-xs6 layui-col-sm4 layui-col-md3 gift-img"><a href="javascript:void(0);" class="thumbnail selectImg" data-choose-val="70113336671965"
+                           data-gift-remarks="Review with Product Text"><img src="http://cs.yk-all.com/upload/73e5cad3d7f4844e/479ffd2bc5ae5c28.jpg" title="Wall charger" alt="Loading..."><i></i></a><label>Wall charger</label></div><div element-loading-text="loading"><div class="bg-white br-5 el-row ok"><p>&nbsp;</p><h2 style="margin-top: 6px; margin-bottom: 6px; text-align: left;"><span style="font-size: 18pt;"><span style="font-family: 宋体;"><span style="font-weight: bold;"><b><span class="15" style="font-size: 13.5pt;"><span style="font-family: &quot;Lucida Sans Unicode&quot;;"><span style="color: rgb(0, 0, 0);"><span style="font-weight: bold;">PLEASE&nbsp;READ&nbsp;THIS&nbsp;FIRST:</span></span></span></span></b></span></span></span></h2><p class="p" style="text-align: left; margin-top: 6px; margin-bottom: 6px;"><span style="font-size: 12pt;"><span style="font-family: Calibri;"><span style="font-size: 10.5pt;"><span style="font-family: &quot;Lucida Sans Unicode&quot;;"><span style="color: rgb(0, 0, 0);">We want your voice to be heard, sharing your opinion of our product which will help other customers to make a better buying decision and help us improve our product analytics, we really appreciate your opinion.</span></span></span></span></span></p><p class="p" style="text-align: left; margin-top: 6px; margin-bottom: 6px;"><span style="font-size: 12pt;"><span style="font-family: Calibri;"><span style="font-size: 10.5pt;"><span style="font-family: &quot;Lucida Sans Unicode&quot;;"><span style="color: rgb(0, 0, 0);">*Any problems please contact&nbsp;our&nbsp;customer service&nbsp;by Email:</span></span></span>&nbsp;<b><span class="15" style="font-size: 12pt;"><span style="font-family: &quot;Lucida Sans Unicode&quot;;"><span style="color: rgb(255, 0, 0);"><span style="font-weight: bold;">support@yk-all.com</span></span></span></span></b><span style="font-size: 10.5pt;"><span style="font-family: &quot;Lucida Sans Unicode&quot;;"><span style="color: rgb(0, 0, 0);">&nbsp; we will get back to you within 24hrs at work days.</span></span></span></span></span></p><p style="text-align: justify;">&nbsp;</p></div><div class="image-dialog"><div class="el-dialog__wrapper" style="display: none;"><div role="dialog" aria-label="dialog" aria-modal="true" class="el-dialog" style="margin-top: 15vh;"><div class="el-dialog__header"><span class="el-dialog__title"></span><button aria-label="Close" type="button" class="el-dialog__headerbtn"><i class="el-dialog__close el-icon el-icon-close"></i></button></div></div></div></div></div><div class="layui-col-xs12"><div role="tab" aria-expanded="true" aria-controls="el-collapse-content-608" aria-describedby="el-collapse-content-608"><div id="el-collapse-head-608" role="button" class="el-collapse-item__header is-active"><div class="avue-group__header"><span class="group-header">IMPORTANT INFO</span><span>Please following 3 questions to claim your FREE gift.</span></div><i class="el-collapse-item__arrow el-icon-arrow-right is-active"></i></div></div></div><input type="number" hidden name="giftId"><input type="text" hidden name="orderId" value=""><!--                <div class="layui-col-xs12">--><!--                    <h4>*3.* Please tell us Your phone model（Please make sure your phone supports wireless--><!--                        charging）:</h4>--><!--                    <div class="layui-form-item">--><!--                        <div class="layui-col-xs12 layui-col-sm2 address-input" style="color:red;">--><!--                            Model--><!--                        </div>--><!--                        <div class="layui-col-xs12 layui-col-sm10">--><!--                            <input type="text" name="Model" lay-verify="required" lay-verType="tips"--><!--                                   lay-reqText="Required" placeholder="If your phone is iPhone X, please enter iPhone X"--><!--                                   autocomplete="off" class="layui-input">--><!--                        </div>--><!--                    </div>--><!--                </div>--><div class="layui-col-xs12"><div class="layui-form-item"><div class="el-col el-col-24 el-col-offset-0 el-col-xs-24 el-col-sm-12 el-col-md-24 avue-form__row" style="padding-left: 10px; padding-right: 10px;"><div label-position="top" class="el-form-item el-form-item--feedback is-required el-form-item--medium avue-form__item--top"><label for="desc" class="el-form-item__label" style="width: 90px;"><span style="color: rgb(255, 0, 0);">[*Required]</span> Where do you buy the product?</label><div class="el-form-item__content" style=""><div tabindex="0" aria-describedby="el-tooltip-5843" span="24" class="el-tooltip el-input el-input--medium el-input--suffix avue-input"><input type="radio" name="local" value="Deutschland">Amazon.de(Germany)(Deutschland)<br><input type="radio" name="local" value="UK">Amazon.co.uk(UK)<br><input type="radio" name="local" value="France">Amazon.fr(France)<br><input type="radio" name="local" value="Italia">Amazon.it(Italy)(Italia)<br><input type="radio" name="local" value="España">Amazon.es(Spain)(España)<br><input type="radio" name="local" value="USA">Amazon.com(USA)<br><input type="radio" name="local" value="Canada">Amazon.ca (Canada）<br></div></div></div></div></div><div label-position="top" class="el-form-item el-form-item--feedback is-required el-form-item--medium avue-form__item--top"><label for="email" class="el-form-item__label" style="width: 90px;">1.<span style="color: rgb(255, 0, 0);">[*Required]</span>					Your Email Address.(IMPORTANT for shipment notification)</label><div class="el-form-item__content" style="margin-left: 0px;"><div tabindex="0" aria-describedby="el-tooltip-5843" span="24" class="el-tooltip el-input el-input--medium el-input--suffix avue-input"><input type="text" placeholder="please input Your email" name="e-mail" autocomplete="off" class="el-input__inner"></div></div></div><div class="el-col el-col-24 el-col-offset-0 el-col-xs-24 el-col-sm-12 el-col-md-24 avue-form__row" style="padding-right: 10px; padding-left: 10px;"><div label-position="top" class="el-form-item el-form-item--feedback is-required el-form-item--medium avue-form__item--top"><label for="email" class="el-form-item__label" style="width: 90px;">2.<span style="color: rgb(255, 0, 0);">[*Required]</span>Please provide your order ID number <br>( e.g: 202-8379500-4252*** ,To claim free gift.)</label><div class="el-form-item__content" style="margin-left: 0px;"><div tabindex="0" aria-describedby="el-tooltip-5843" span="24" class="el-tooltip el-input el-input--medium el-input--suffix avue-input"><input type="text" placeholder="please input Your ID number" name="number" autocomplete="off" class="el-input__inner"></div></div></div></div><div class="el-col el-col-24 el-col-offset-0 el-col-xs-24 el-col-sm-12 el-col-md-24 avue-form__row" style="padding-right: 10px; padding-left: 10px;"><div label-position="top" class="el-form-item el-form-item--feedback is-required el-form-item--medium avue-form__item--top"><label for="name" class="el-form-item__label" style="width: 90px;">3.<span style="color: rgb(255, 0, 0);">[* Required]</span> To Claim your FREE gift, please provide your shipping Address.</label><label for="name" class="el-form-item__label" style="width: 90px;">Name:</label><div class="el-form-item__content" style="margin-left: 0px;"><div tabindex="0" aria-describedby="el-tooltip-3658" span="24" class="el-tooltip el-input el-input--medium el-input--suffix avue-input"><input type="text" placeholder="please input Your name" autocomplete="off" name="Name" class="el-input__inner"></div></div></div></div><div class="el-col el-col-24 el-col-offset-0 el-col-xs-24 el-col-sm-12 el-col-md-24 avue-form__row" style="padding-right: 10px; padding-left: 10px;"><div label-position="top" class="el-form-item el-form-item--feedback is-required el-form-item--medium avue-form__item--top"><label for="email" class="el-form-item__label" style="width: 90px;">Address:</label><div class="el-form-item__content" style="margin-left: 0px;"><div tabindex="0" aria-describedby="el-tooltip-5843" span="24" class="el-tooltip el-input el-input--medium el-input--suffix avue-input"><input type="text" placeholder="please input Your address" name="Address" autocomplete="off" class="el-input__inner"></div></div></div></div><div class="el-col el-col-24 el-col-offset-0 el-col-xs-24 el-col-sm-12 el-col-md-24 avue-form__row" style="padding-left: 10px; padding-right: 10px;"><div label-position="top" class="el-form-item el-form-item--feedback is-required el-form-item--medium avue-form__item--top"><label for="desc" class="el-form-item__label" style="width: 90px;">City/Town:</label><div class="el-form-item__content" style="margin-left: 0px;"><div tabindex="0" aria-describedby="el-tooltip-5843" span="24" class="el-tooltip el-input el-input--medium el-input--suffix avue-input"><input type="text" placeholder="please input Your  City/Town" name="City" autocomplete="off" class="el-input__inner"></div></div></div></div><div class="el-col el-col-24 el-col-offset-0 el-col-xs-24 el-col-sm-12 el-col-md-24 avue-form__row" style="padding-left: 10px; padding-right: 10px;"><div label-position="top" class="el-form-item el-form-item--feedback is-required el-form-item--medium avue-form__item--top"><label for="desc" class="el-form-item__label" style="width: 90px;">State/Province:</label><div class="el-form-item__content" style="margin-left: 0px;"><div tabindex="0" aria-describedby="el-tooltip-5843" span="24" class="el-tooltip el-input el-input--medium el-input--suffix avue-input"><input type="text" placeholder="please input Your state" name="State" autocomplete="off" class="el-input__inner"></div></div></div></div><div class="el-col el-col-24 el-col-offset-0 el-col-xs-24 el-col-sm-12 el-col-md-24 avue-form__row" style="padding-left: 10px; padding-right: 10px;"><div label-position="top" class="el-form-item el-form-item--feedback is-required el-form-item--medium avue-form__item--top"><label for="desc" class="el-form-item__label" style="width: 90px;">ZIP/Postal Code:</label><div class="el-form-item__content" style="margin-left: 0px;"><div tabindex="0" aria-describedby="el-tooltip-5843" span="24" class="el-tooltip el-input el-input--medium el-input--suffix avue-input"><input type="text" placeholder="please input Your zip" name="ZIP" autocomplete="off" class="el-input__inner"></div></div></div></div><div class="el-col el-col-24 el-col-offset-0 el-col-xs-24 el-col-sm-12 el-col-md-24 avue-form__row" style="padding-left: 10px; padding-right: 10px;"><div label-position="top" class="el-form-item el-form-item--feedback is-required el-form-item--medium avue-form__item--top"><label for="desc" class="el-form-item__label" style="width: 90px;">Country :</label><div class="el-form-item__content" style="margin-left: 0px;"><div tabindex="0" aria-describedby="el-tooltip-5843" span="24" class="el-tooltip el-input el-input--medium el-input--suffix avue-input"><input type="text" placeholder="please input Your country" autocomplete="off" name="Country" class="el-input__inner"></div></div></div></div><div class="el-col el-col-24 el-col-offset-0 el-col-xs-24 el-col-sm-12 el-col-md-24 avue-form__row" style="padding-left: 10px; padding-right: 10px;"><div label-position="top" class="el-form-item el-form-item--feedback is-required el-form-item--medium avue-form__item--top"><label for="desc" class="el-form-item__label" style="width: 90px;">Phone Number:</label><div class="el-form-item__content" style="margin-left: 0px;"><div tabindex="0" aria-describedby="el-tooltip-5843" span="24" class="el-tooltip el-input el-input--medium el-input--suffix avue-input"><input type="text" placeholder="please input Your phone" autocomplete="off" name="phone" class="el-input__inner"></div></div></div></div><div index="3" active="1" class="avue-group avue-group--arrow"><div role="tablist" aria-multiselectable="true" class="el-collapse"><div class="el-collapse-item is-active is-disabled"><div role="tab" aria-expanded="true" aria-controls="el-collapse-content-6020" aria-describedby="el-collapse-content-6020"><div id="el-collapse-head-6020" role="button" class="el-collapse-item__header is-active"><div class="avue-group__header"><span class="group-header">UPLOAD YOUR SCREENSHOT</span><span>Only JPG, JPEG, PNG files can be uploaded</span></div><i class="el-collapse-item__arrow el-icon-arrow-right is-active"></i></div></div><div id="el-collapse-content-6020" role="tabpanel" aria-labelledby="el-collapse-head-6020" class="el-collapse-item__wrap"><div class="el-collapse-item__content"><div class="avue-form__group avue-form__group--flex"><div class="el-col el-col-24 el-col-offset-0 el-col-xs-24 el-col-sm-12 el-col-md-24 avue-form__row" style="padding-right: 10px; padding-left: 10px;"><div label-position="top" class="el-form-item el-form-item--feedback el-form-item--medium avue-form__item--top"><div class="el-form-item__content" style="margin-left: 0px;"><div tabindex="0" aria-describedby="el-tooltip-6099" class="el-tooltip"><span>Please attach the screenshot of your opinion you wrote for our product on the the shopping marketplace. Your opinion will be seen by other customers to help them to make a better buying decision. Thank You! (To comply with Amazon community policy guidelines, you are not required to leave reviews or feedback on Amazon community)</span></div></div></div></div><div class="el-col el-col-18 el-col-offset-0 el-col-xs-24 el-col-sm-12 el-col-md-18 avue-form__row" style="padding-right: 10px; padding-left: 10px;"><div label-position="top" class="el-form-item el-form-item--feedback is-required el-form-item--medium avue-form__item--top"><div class="el-form-item__content" style="margin-left: 0px;"><div><ul class="el-upload-list el-upload-list--picture-card"></ul><div tabindex="0" class="el-upload el-upload--picture-card"><div class="layui-form-item"><button type="button" class="layui-btn" id="upImg"><i class="layui-icon">&#xe67c;</i>Choose File
+                        </button><input type="file" name="image" accept="image/gif,image/jpeg,image/jpg,image/png,image/svg"
+                               style="display:none"/><label class="imageName">No File</label><br></div></div></div></div></div></div></div></div></div></div></div></div></div><div index="3" active="1" class="avue-group avue-group--arrow"><div role="tablist" aria-multiselectable="true" class="el-collapse"><div class="el-collapse-item is-active is-disabled"><div id="el-collapse-content-6020" role="tabpanel" aria-labelledby="el-collapse-head-6020" class="el-collapse-item__wrap"><div class="el-collapse-item__content"><div class="avue-form__group avue-form__group--flex"><div class="el-col el-col-24 el-col-offset-0 el-col-xs-24 el-col-sm-12 el-col-md-24 avue-form__row" style="padding-right: 10px; padding-left: 10px;"><div label-position="top" class="el-form-item el-form-item--feedback el-form-item--medium avue-form__item--top"><div class="el-form-item__content" style="margin-left: 90px;"><div tabindex="0" aria-describedby="el-tooltip-6099" class="el-tooltip"><span>Please attach the screenshot of your opinion you wrote for our product on the the shopping marketplace. Your opinion will be seen by other customers to help them to make a better buying decision. Thank You! (To comply with Amazon community policy guidelines, you are not required to leave reviews or feedback on Amazon community)</span></div></div></div></div><div class="el-col el-col-18 el-col-offset-0 el-col-xs-24 el-col-sm-12 el-col-md-18 avue-form__row" style="padding-right: 10px; padding-left: 10px;"><div label-position="top" class="el-form-item el-form-item--feedback is-required el-form-item--medium avue-form__item--top"><div class="el-form-item__content" style="margin-left: 90px;"><div><ul class="el-upload-list el-upload-list--picture-card"></ul><div tabindex="0" class="el-upload el-upload--picture-card"><i class="el-icon-plus"></i></div></div></div></div></div></div></div></div></div></div></div><div class="layui-col-xs12" style="text-align:center;padding-top:20px;margin-bottom: 40px;"><button type="button" lay-submit lay-filter="*" id="upbtn"
+                            class="layui-btn layui-btn-lg updataBtn">Submit
+                    </button></div></form></div></div></div><script src="/new_static/js/layui.js"></script><script src="/new_static/js/lrz.bundle.js"></script><script>
+    var imgTypeError = "Unsupported image format"; //上传图片类型错误提示(图片格式不支持)
+    var fileSizeError = "Picture size cannot exceed"; //上传文件大小错误提示(文件大小超出范围500kb)
+    layui.use(['layer', 'form'], function () {
+        var layer = layui.layer,
+            form = layui.form,
+            $ = layui.$,
+            upload = layui.upload,
+            fromImg = new FormData();
+
+        form.on('submit(*)', function (data) {
+            if ($('input[name="giftId"]').val() == '') {
+                $("body,html").animate({
+                    scrollTop: 0
+                }, 300);
+                layer.msg('Please choose the gift you like');
+                return false;
+            } else if ($('input[name="image"]').val() == '') {
+                layer.tips('Required', '#upImg');
+                return false;
+            }
+            $(".updataBtn").attr("disabled", "disabled");
+            // var fromImg = new FormData();
+             var img = $('input[name="image"]').get(0).files[0];
+             console.log(img.name);
+             //fromImg.append("file", img);
+            fromImg.append("data", $('.layui-form').serialize());
+          	var giftId =  $('input[name="giftId"]').val();
+          	var orderId =  $('input[name="orderId"]').val();
+          	var local = $("input[name='local']:checked").val();
+          	var email =  $('input[name="e-mail"]').val();
+          	var number =  $('input[name="number"]').val();
+            var Name =  $('input[name="Name"]').val();
+          	var Address =  $('input[name="Address"]').val();
+          	var City =  $('input[name="City"]').val();
+          	var State =  $('input[name="State"]').val();
+          	var ZIP =  $('input[name="ZIP"]').val();
+          	var Country =  $('input[name="Country"]').val();
+          	var phone =  $('input[name="phone"]').val();
+          	var img = $('input[name="image"]').val();
+          //console.log(fromImg);
+            $.ajax({
+                type: 'post',
+                url: "savegifts",
+                data: fromImg,
+                dataType: 'json',
+              	processData:false,  
+            	contentType:false,  
+                success: function (res) {
+                    if (res.code == 1) {
+                      	$.ajax({
+                          type: 'post',
+                          url: "savegift",
+                          data: {giftId:giftId,orderId:orderId,local:local,email:email,number:number,Name:Name,Address:Address,City:City,State:State,ZIP:ZIP,Country:Country,phone:phone,img:res.data},
+                          dataType: 'json', 
+                          success: function (ress) {
+                                  layer.alert("<p style = 'font-size:150%'>Thank you very much for your participation, we will send you a gift as soon as possible.</p>", {
+                                icon: 1,
+                                title: 'Tips',
+                                closeBtn: 0
+                            },
+                            function (index) {
+                                window.location.replace(
+                                    "http://www.yk-all.com/ok");//
+                                layer.close(index);
+                            });
+                        	}
+                        });
+                    } else if(res.code == 2){
+                        layer.alert("Please upload the picture before submitting!", {
+                            icon: 2,
+                            title: 'Tips',
+                            closeBtn: 0
+                        })
+                    } else {
+                        //"Order ID has been used!"
+                        layer.alert(res.msg, {
+                            icon: 2,
+                            title: 'Tips',
+                            closeBtn: 0
+                        })
+                    }
+                },
+                error: function (error) {
+                    $(".updataBtn").removeAttr("disabled");
+                    layer.alert('Sever Error!', {
+                        icon: 2,
+                        title: 'Error',
+                        closeBtn: 0
+                    })
+                },
+                complete: function () {
+                    $(".updataBtn").removeAttr("disabled");
+                }
+            });
+            return false;
+        });
+
+        // 上传图片验证
+        var File = $('input[name="image"]')[0];
+        File.addEventListener('change', function () {
+            var file = this.files[0];
+
+            //判断上传图片类型
+            var imgType = file.type;
+            if (imgType !== 'image/jpeg' && imgType !== 'image/png' && imgType !== 'image/jpg' &&
+                imgType !== 'image/gif' && imgType !== 'image/svg') {
+                layer.msg(imgTypeError);
+                file.value = '';
+                return false;
+            }
+
+            //判断上传图片大小
+            if (file.size > 0) {
+                if (file.size > 1024000 * 10) {
+                    layer.msg(fileSizeError + ' 10MB');
+                    File.value = '';
+                    return false;
+                }
+            } else {
+                return false;
+            }
+
+            //压缩图片
+            lrz(this.files[0], {
+                width: 1000, //设置图片压缩后的最大宽度，默认为原图宽度
+                // height: 600, //同上
+                quality: 0.7, //图片压缩质量，取值 0 - 1，默认为 0.7    
+            })
+                .then(function (rst) {
+                    // 处理成功会执行
+                    fromImg.append("file", rst.base64);
+                    // fromImg.append("file", rst.formData);
+                    // console.log(rst);
+                })
+                .catch(function (err) {
+                    // 处理失败会执行
+                    return false;
+                })
+                .always(function () {
+                    // 不管是成功失败，都会执行
+                });
+
+            $('.imageName').text(file.name);
+        });
+
+        // 弹出图片选择框
+        $('#upImg').on('click', function (e) {
+            e.preventDefault();
+            $('input[name="image"]').trigger("click");
+        });
+
+        // 选择礼物
+        $(".gift-img").on("click", ".selectImg", function () {
+            let giftId = $(this).attr('data-choose-val');
+            $('input[name="giftId"]').val(giftId);
+            $('.gift-img a').removeClass('giftBox');
+            $('.gift-img label').css('color', '');
+            $(this).addClass('giftBox');
+            $(this).next().css('color', '#009688');
+
+            let remarks = $(this).attr('data-gift-remarks');
+            layer.closeAll('tips');
+            if (remarks != '-') {
+                layer.tips(remarks, $(this), {
+                    tips: [3, '#009688'],
+                    time: 0
+                });
+            }
+        });
+    });
+</script></body></html>

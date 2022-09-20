@@ -1,0 +1,438 @@
+
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>Warranty</title><link rel="stylesheet" href="https://at.alicdn.com/t/font_2687359_7jps00vj8d.css"><link rel="stylesheet" href="/new_static/layui/css/layui.css"><!--[if lt IE 9]><script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script><script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script><![endif]--><style>
+    @media screen and (max-width: 767px) {
+      .address-input {
+        text-align: left !important;
+      }
+    }
+
+    .imageName {
+        border: none;
+        cursor: default;
+        margin-left: 15px;
+        max-width: 260px;
+        height: 30px;
+        color: #009688;
+    }
+
+    .giftBox {
+        position: relative;
+        overflow: hidden;
+        border: 1px solid #009688 !important;
+    }
+
+    .giftBox i {
+        display: block;
+        position: absolute;
+        border-bottom: 30px solid #009688;
+        border-left: 30px solid transparent;
+        width: 0px;
+        height: 0px;
+        bottom: 0rem;
+        right: 0;
+    }
+
+    .giftBox i:after {
+        position: absolute;
+        content: '\2714';
+        color: white;
+        left: -15px;
+        top: 13px;
+        font-size: 0.8rem;
+    }
+
+    .gift-img {
+        text-align: center;
+        padding: 0 10px;
+        margin-bottom: 15px;
+        color: #666;
+        font-size: 12px;
+    }
+
+    .gift-img label{
+        height: 15px;
+        display: block;
+    }
+
+    .gift-img img {
+        width: 100%;
+        max-height: 129px;
+    }
+
+    .gift-img a:hover {
+        border-color: #ababab;
+    }
+
+    .thumbnail {
+        display: block;
+        padding: 4px;
+        margin-bottom: 5px;
+        line-height: 1.42857143;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        -webkit-transition: border .2s ease-in-out;
+        -o-transition: border .2s ease-in-out;
+        transition: border .2s ease-in-out;
+    }
+
+    .address-input {
+        height: 38px;
+        line-height: 38px;
+        text-align: right;
+        padding-right: 15px;
+    }
+
+    h4 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .site-title {
+        margin: 30px 0 20px;
+    }
+
+    .site-title fieldset {
+        border: none;
+        padding: 0;
+        border-top: 1px solid #eee;
+    }
+
+    .site-title fieldset legend {
+        margin-left: 20px;
+        padding: 0 10px;
+        font-size: 20px;
+        font-weight: 300;
+    }
+
+    .layui-elem-quote a {
+        color: darkblue;
+        text-decoration: none;
+    }
+
+    .layui-elem-quote a:hover {
+        text-decoration: underline;
+    }
+
+    .img-thumbnail {
+        display: inline-block;
+        max-width: 100%;
+        height: auto;
+        line-height: 1.42857143;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        -webkit-transition: all .2s ease-in-out;
+        -o-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+    }
+
+    img {
+        vertical-align: middle;
+    }
+    #rate-elem i{
+        font-size: 35px;
+    }
+    .rate-shade{
+        display: none;
+        z-index: 888888;
+        background-color: rgb(0, 0, 0,0.6);
+    }
+    .rate-box{
+        z-index: 888889;
+        text-align: center;
+        position: absolute;
+        background: white;
+        padding: 60px 15px 75px 15px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .layui-layer-content{
+        font-size: 16px !important;
+    }
+    .icon{
+        position: absolute;
+        top: 30px;
+    }
+    .header-tips{
+        --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
+        margin-top:20px;background-color: #FFB800;border-radius:5px;border:none
+    }
+    .header-tips > i{
+      font-size: 20px;
+      font-weight: bold;
+      color: red;
+    }
+    .recommend{
+        border: 1px solid #d2d2d2;
+        text-align: center;
+        padding:10px 4px;
+        cursor: pointer;
+        border-right: none;
+    }
+    .recommend:hover{
+        background-color: #7bc590;
+        color: white;
+        border-color: #7bc590;
+    }
+    .recommend-active{
+        background-color: #5FB878;
+        color: white;
+        border-color: #5FB878;
+    }
+    .footer_concatsUs{
+      height: 35px;
+      line-height: 35px;
+      display: flex;
+    }
+    .footer_concatsUs > i,.footer_concatsUs > a{
+      display: block;
+    }
+    .footer_concatsUs > i {
+        font-size: 25px;
+    }
+    .footer_concatsUs > a {
+        font-size: 18px;
+        margin-left: 8px;
+    }
+  </style></head><body><div class="layui-container"><div class="layui-row" style="max-width:1000px;min-width:300px;margin: 0 auto 30px auto;"><div class="layui-col-xs12"><blockquote class="layui-elem-quote header-tips"><i class="iconfont icon-warn"></i><b style="color: red;font-size:18px">Limited Time Application: within 30 Days!</b><br>
+          Enjoy a 30-day valid period of getting extra product for Lifetime Warranty Application! The application which exceeds 30 days after purchase will be invalid.<br><br><b style="color: #358ed0;font-size:18px">Lifetime Warranty Terms</b><br>
+          All of our products come with a Lifetime Replacement Guarantee. For ANY quality-related issues, we will send you a replacement for free! </blockquote><form class="layui-form" method="POST"><!-- Form --><input type="number" hidden name="giftId"><input name="uuid" value="KKM-US" hidden readonly><input name="tip" value="support@xh-all.com" hidden readonly><!-- Product --><div class="site-title"><h4>1. Please choose the product you like.</h4></div><div class="product-warp"><div class="layui-col-xs6 layui-col-sm4 layui-col-md3 gift-img"><a href="javascript:void(0);" class="thumbnail selectImg" data-choose-val="72761695782719" data-gift-remarks=""><img src="http://cs.xh-all.com/upload/cb4cc2fa704aa327/638b7e115d36867e.jpg" title="浴室挂钩gz" alt="浴室挂钩gz" class="formLi_img" alt="Loading..."><i></i></a><!-- <label>浴室挂钩gz</label> --></div><div class="layui-col-xs6 layui-col-sm4 layui-col-md3 gift-img"><a href="javascript:void(0);" class="thumbnail selectImg" data-choose-val="72755462875783" data-gift-remarks=""><img src="http://cs.xh-all.com/upload/b08595db7868ca01/99dbee5b563d2b6b.jpg" title="酒精测试仪hw" alt="酒精测试仪hw" class="formLi_img" alt="Loading..."><i></i></a><!-- <label>酒精测试仪hw</label> --></div><div class="layui-col-xs6 layui-col-sm4 layui-col-md3 gift-img"><a href="javascript:void(0);" class="thumbnail selectImg" data-choose-val="72755460184566" data-gift-remarks=""><img src="http://cs.xh-all.com/upload/d614ca44354acf0f/169f1e9ff8b3f602.jpg" title="蓝牙耳机hw" alt="蓝牙耳机hw" class="formLi_img" alt="Loading..."><i></i></a><!-- <label>蓝牙耳机hw</label> --></div><div class="layui-col-xs6 layui-col-sm4 layui-col-md3 gift-img"><a href="javascript:void(0);" class="thumbnail selectImg" data-choose-val="72755457565025" data-gift-remarks=""><img src="http://cs.xh-all.com/upload/6eec9e1fd56446af/3aaccbe7da95cf5a.jpg" title="无线充hw" alt="无线充hw" class="formLi_img" alt="Loading..."><i></i></a><!-- <label>无线充hw</label> --></div><div class="layui-col-xs6 layui-col-sm4 layui-col-md3 gift-img"><a href="javascript:void(0);" class="thumbnail selectImg" data-choose-val="72755429777996" data-gift-remarks=""><img src="http://cs.xh-all.com/upload/0a749f89148adbaf/fc04288ea8c411fd.jpg" title="手足印泥相框gw" alt="手足印泥相框gw" class="formLi_img" alt="Loading..."><i></i></a><!-- <label>手足印泥相框gw</label> --></div><div class="layui-col-xs6 layui-col-sm4 layui-col-md3 gift-img"><a href="javascript:void(0);" class="thumbnail selectImg" data-choose-val="72755427862061" data-gift-remarks=""><img src="http://cs.xh-all.com/upload/d614ca44354acf0f/169f1e9ff8b3f602.jpg" title="蓝牙耳机gw" alt="蓝牙耳机gw" class="formLi_img" alt="Loading..."><i></i></a><!-- <label>蓝牙耳机gw</label> --></div></div><!-- Order ID --><div class="layui-col-xs12"><h4>2. Please fill in Order number <small style="padding-left:10px;"><i class="layui-icon layui-icon-about"></i><a href="https://www.amazon.com/gp/css/order-history" target="_blank" style="text-decoration: underline;margin-left: 6px;">Click here to find your Order number</a></small></h4><div class="layui-form-item"><input type="text" name="orderId" lay-verify="required" lay-reqText="Required" placeholder="For example:123-1234567-1234567" autocomplete="off" class="layui-input" lay-verType="tips" maxlength="30"></div></div><!-- E-Mail --><div class="layui-col-xs12"><h4>3. Please provide your email address to register your lifetime warranty</h4><div class="layui-form-item"><div class="layui-col-xs12 layui-col-sm12"><input type="text" name="e-mail" placeholder=" E-Mail" maxlength="50" lay-verify="required" lay-verType="tips" lay-reqText="Required" autocomplete="off" class="layui-input"></div></div></div><!-- Phone Model --><div class="layui-col-xs12" style="display:none"><h4>4. Please tell us Your phone model（Please make sure your phone supports wireless charging）:</h4><div class="layui-form-item"><div class="layui-col-xs12 layui-col-sm12"><input type="text" maxlength="50" name="Model" lay-verType="tips" lay-reqText="Required" placeholder="If your phone is iPhone X, please enter iPhone X" autocomplete="off" class="layui-input" value="empty"></div></div></div><!-- Local --><div class="layui-col-xs12"><h4>4. Please choose your Amazon site.</h4><div class="layui-form-item"><div class="layui-col-xs12" style="padding-left:20px;"><input type="radio" lay-filter="local" name="local" value="DE" title="Amazon.de(Germany)(Deutscland)"><br><input type="radio" lay-filter="local" name="local" value="UK" title="Amazon.co.uk(UK)"><br><input type="radio" lay-filter="local" name="local" value="FR" title="Amazon.fr(France)"><br><input type="radio" lay-filter="local" name="local" value="IT" title="Amazon.it(Italy)(Italia)"><br><input type="radio" lay-filter="local" name="local" value="ES" title="Amazon.es(Spain)(España)"><br><input type="radio" lay-filter="local" name="local" value="USA" title="Amazon.com(USA)"><br><input type="radio" lay-filter="local" name="local" value="CA" title="Amazon.ca(Canada)"><br></div></div></div><!-- Satisfied --><div class="layui-col-xs12"><h4>5. Are you satisfied with the product ordered from us?</h4><div class="layui-form-item"><div class="layui-col-xs12" style="padding-left:20px;"><input type="radio" lay-filter="reason" name="reason" value="Extremely satisfied" title="Extremely satisfied" checked><br><input type="radio" lay-filter="reason" name="reason" value="Very satisfied" title="Very satisfied"><br><input type="radio" lay-filter="reason" name="reason" value="Somewhat satisfied" title="Somewhat satisfied"><br><input type="radio" lay-filter="reason" name="reason" value="Not so satisfied" title="Not so satisfied"><br><input type="radio" lay-filter="reason" name="reason" value="Not at all satisfied" title="Not at all satisfied"></div></div></div><!-- Ration --><div class="layui-col-xs12" style="margin-bottom: 5px;"><h4>6. How likey is it that you would recommend our products to your friends or colleagues?</h4><div class="layui-form-item"><div class="layui-col-xs12"><div class="layui-row recommend-box"><div class="layui-col-xs1 recommend" style="border-top-left-radius: 3px;border-bottom-left-radius: 3px">0</div><div class="layui-col-xs1 recommend">1</div><div class="layui-col-xs1 recommend">2</div><div class="layui-col-xs1 recommend">3</div><div class="layui-col-xs1 recommend">4</div><div class="layui-col-xs1 recommend">5</div><div class="layui-col-xs1 recommend">6</div><div class="layui-col-xs1 recommend">7</div><div class="layui-col-xs1 recommend">8</div><div class="layui-col-xs1 recommend">9</div><div class="layui-col-xs1 recommend" style="border-right: 1px solid #d2d2d2;border-top-right-radius: 3px;border-bottom-right-radius: 3px">10</div><div class="layui-col-xs1 recommend-count" style="padding:10px 5px;text-align: center;">0%</div></div><input id="recommend" name="recommend" hidden></div></div></div><!-- Address --><div class="layui-col-xs12"><h4>7. Fill in your delivery address.</h4><!-- A.Name --><div class="layui-form-item"><div class="layui-col-xs12 layui-col-sm2 address-input">Your Name*</div><div class="layui-col-xs12 layui-col-sm10"><input type="text" name="Name" maxlength="30" lay-verify="required" lay-verType="tips" lay-reqText="Required" autocomplete="off" class="layui-input"></div></div><!-- A.Phone --><div class="layui-form-item"><div class="layui-col-xs12 layui-col-sm2 address-input">
+                Phone*</div><div class="layui-col-xs12 layui-col-sm10"><input type="text" name="phone" maxlength="30" lay-verify="required" lay-verType="tips" lay-reqText="Required" autocomplete="off" class="layui-input"></div></div><!-- A.Address --><div class="layui-form-item"><div class="layui-col-xs12 layui-col-sm2 address-input">Address*</div><div class="layui-col-xs12 layui-col-sm10"><input type="text" name="Address" maxlength="60" lay-verify="required" lay-verType="tips" lay-reqText="Required" autocomplete="off" class="layui-input"></div></div><!-- A.City --><div class="layui-form-item"><div class="layui-col-xs12 layui-col-sm2 address-input">City*</div><div class="layui-col-xs12 layui-col-sm10"><input type="text" maxlength="20" name="City" lay-verify="required" lay-verType="tips" lay-reqText="Required" autocomplete="off" class="layui-input"></div></div><!-- A.State --><div class="layui-form-item"><div class="layui-col-xs12 layui-col-sm2 address-input">State/Province*</div><div class="layui-col-xs12 layui-col-sm10"><input type="text" maxlength="30" name="State" lay-verify="required" lay-verType="tips" lay-reqText="Required" autocomplete="off" class="layui-input"></div></div><!-- A.ZIP --><div class="layui-form-item"><div class="layui-col-xs12 layui-col-sm2 address-input">Postal Code*</div><div class="layui-col-xs12 layui-col-sm10"><input type="text" maxlength="20" name="ZIP" lay-verify="required" lay-verType="tips" lay-reqText="Required" autocomplete="off" class="layui-input"></div></div></div><!-- A.Country --><div class="layui-form-item"><div class="layui-col-xs12 layui-col-sm2 address-input">
+                Country*</div><div class="layui-col-xs12 layui-col-sm10"><input type="text" name="country" maxlength="30" lay-verify="required" lay-verType="tips" lay-reqText="Required" autocomplete="off" class="layui-input"></div></div><!-- Pay Image --><div class="layui-col-xs12"><h4>8. Please upload a proof of your purchase (Proof of purchase is needed to process a warranty request for a replacement.)</h4><div class="layui-form-item"><div class="layui-col-xs12 layui-col-sm12"><button type="button" class="layui-btn" id="upImg"><i class="layui-icon">&#xe67c;</i>Choose File </button><input type="file" id="image" name="image" accept="image/gif,image/jpeg,image/jpg,image/png,image/svg" hidden /><label class="imageName">PNG, JPG, GIF up to 10MB</label><br></div></div></div><!-- Contact Us --><div class="layui-col-xs12" style="margin-top: 30px;"><blockquote class="layui-elem-quote layui-quote-nm">
+              If you have any questions, please send an email and our customer service representative will reply you as soon as possible! <br><div class="footer_concatsUs"><i class="layui-icon layui-icon-email"></i><a href="mailto:support@xh-all.com" rel="nofollow" target="_blank">support@xh-all.com</a></div></blockquote></div><!-- Sumbit --><div class="layui-col-xs12" style="text-align:center;padding-top:20px;margin-bottom: 40px;"><button type="button" lay-submit lay-filter="*" id="upbtn" class="layui-btn layui-btn-lg updataBtn">Submit</button></div></form></div></div></div></body><script src="/new_static/layui/layui.js"></script><script src="/new_static/js/lrz.bundle.js"></script><script>
+  var imgTypeError = "Unsupported image format"; //上传图片类型错误提示(图片格式不支持)
+  var fileSizeError = "Picture size cannot exceed"; //上传文件大小错误提示(文件大小超出范围500kb)
+  layui.use(['layer', 'form', 'jquery'], function() {
+    var layer = layui.layer,
+      form = layui.form,
+      // jquery = layui.jquery,
+      $ = layui.$,
+      fromImg = new FormData();
+    var uploadImg = '';
+
+    //推荐比例
+    $('.recommend').on('click', function() {
+      $("#recommend").val((parseInt($(this).text()) * 10));
+      $(".recommend-box div").removeClass('recommend-active');
+      $(this).prevAll().addClass('recommend-active');
+      $(this).addClass('recommend-active');
+      $(".recommend-count").text((parseInt($(this).text()) * 10) + '%');
+    });
+
+    // 上传图片验证
+    var File = $('input[name="image"]')[0];
+    File.addEventListener('change', function() {
+      var file = this.files[0];
+
+      //判断上传图片类型
+      var imgType = file.type;
+      if (imgType !== 'image/jpeg' && imgType !== 'image/png' && imgType !== 'image/jpg' &&
+        imgType !== 'image/gif' && imgType !== 'image/svg') {
+        layer.msg(imgTypeError);
+        file.value = '';
+        return false;
+      }
+
+      //判断上传图片大小
+      if (file.size > 0) {
+        if (file.size > 1024000 * 10) {
+          layer.msg(fileSizeError + ' 10MB');
+          File.value = '';
+          return false;
+        }
+      } else {
+        return false;
+      }
+
+      //压缩图片
+      lrz(this.files[0], {
+          width: 1000, //设置图片压缩后的最大宽度，默认为原图宽度
+          // height: 600, //同上
+          quality: 0.7, //图片压缩质量，取值 0 - 1，默认为 0.7    
+        })
+        .then(function(rst) {
+          // 处理成功会执行
+          // fromImg.append("file", rst.base64);
+          uploadImg = rst.base64
+        })
+        .catch(function(err) {
+          // 处理失败会执行
+          layer.alert('Image upload failed！', {
+            icon: 2,
+            title: 'Error',
+            closeBtn: 0,
+            btn: 'OK'
+          });
+          return false;
+        })
+        .always(function() {
+          // 不管是成功失败，都会执行
+        });
+      $('.imageName').text(file.name);
+    });
+
+    // 弹出图片选择框
+    $('#upImg').on('click', function(e) {
+      $('.imageName').text('PNG,JPG,GIF up to 10MB');
+      e.preventDefault();
+      $('input[name="image"]').trigger("click");
+    });
+
+    // 选择礼物
+    $(".gift-img").on("click", ".selectImg", function() {
+      let giftId = $(this).attr('data-choose-val');
+      $('input[name="giftId"]').val(giftId);
+      $('.gift-img a').removeClass('giftBox');
+      $('.gift-img label').css('color', '');
+      $(this).addClass('giftBox');
+      $(this).next().css('color', '#009688');
+    });
+
+    // 表单数据提交
+    form.on('submit(*)', function(data) {
+      var _this = $(this);
+      // 表单验证
+
+      if ($('input[name="giftId"]').val() == '') { // 礼品ID
+        $("body,html").animate({
+          scrollTop: 0
+        }, 300);
+        layer.msg('Please choose the product you like.');
+        return false;
+      } else if ($('input[name="image"]').val() == '') { // 订单截图
+        $("body,html").animate({
+          scrollTop: $('#upImg').offset().top - 100
+        }, 300);
+        layer.tips('Required', '#upImg');
+        return false;
+      } 
+      else if (typeof($("input[name='local']:checked").val()) == "undefined") { // 站点
+        $("body,html").animate({
+          scrollTop: $('.layui-form-radio').offset().top - 100
+        }, 300);
+        layer.tips('Required', '.layui-form-radio', { tips: 1 });
+        return false;
+      }else if ($("#recommend").val() == '') { // 推荐评分
+        $("body,html").animate({
+          scrollTop: $('.recommend-box').offset().top - 100
+        }, 300);
+        layer.tips('Required', '.recommend-box', { tips: 1 });
+        return false;
+      }
+
+      $(".updataBtn").attr("disabled", "disabled");
+      fromImg.append("data", $('.layui-form').serialize());
+      if(uploadImg == ''){
+        layer.alert('Please upload the picture again！', {
+          icon: 2,
+          title: 'Error',
+          closeBtn: 0,
+          btn: 'OK'
+        });
+        return false;
+      }
+      fromImg.append("file", uploadImg);
+      // AJAX
+      let _formVal = $('.layui-form').serialize().split("&");
+      let _resultVal = {};
+      for(let i in _formVal){
+        let _splic = _formVal[i].split('=');
+        let _cache = _splic[1];
+        // 特殊格式处理
+        if(_splic[0] != 'phone'){
+          _cache = _cache.replace(/\+/g,' ');
+        }
+        _cache = decodeURIComponent(_cache)
+
+        _resultVal[_splic[0]] = _cache;
+      }
+      console.log(_resultVal)
+      $.ajax({
+        type: 'post',
+        url: "savegifts",
+        data: fromImg,
+        dataType: 'json',
+        contentType: false,
+        processData: false,
+        success: function(res) {
+          if (res.code == 1) {
+            $.ajax({
+              type: 'post',
+              url: "savegift",
+              data: {
+                giftId: _resultVal['giftId'],
+                orderId: _resultVal['orderId'],
+                local: _resultVal['local'],
+                email: _resultVal['e-mail'],
+                number: _resultVal['orderId'],
+                Name: _resultVal['Name'],
+                Address: _resultVal['Address'],
+                reason: _resultVal['reason'],
+                City: _resultVal['City'],
+                State: _resultVal['State'],
+                ZIP: _resultVal['ZIP'],
+                Country: _resultVal['country'],
+                phone: _resultVal['phone'],
+                recommend: _resultVal['recommend'],
+                img: res.data
+              },
+              dataType: 'json',
+              success: function(ress) {
+                $('#upbtn').html('<i class="layui-icon layui-icon-ok layui-font-green"></i>');
+                layer.alert("Check your email to confirm your shipping address information within 24 hours.", {
+                  icon: 1,
+                  btn: 'OK',
+                  time: 3 * 1000,
+                  success: function(layero, index) {
+                    var timeNum = this.time / 1000,
+                      setText = function(start) {
+                        layer.title((start ? timeNum : --timeNum) + ' s', index);
+                      };
+                    setText(!0);
+                    this.timer = setInterval(setText, 1000);
+                    if (timeNum <= 0) clearInterval(this.timer);
+                  },
+                  end: function() {
+                    window.location.replace("http://cs.xh-all.com/ok");
+                    clearInterval(this.timer);
+                  }
+                });
+              }
+            });            
+          } else if (res.code == 2) {
+            layer.alert("Please upload the picture before submitting!", {
+              icon: 2,
+              title: 'Tips',
+              closeBtn: 0
+            })
+            fromImg.append("file", uploadImg);
+          } else {
+            //"Order ID has been used!"
+            layer.alert(res.msg, {
+              icon: 2,
+              title: 'Tips',
+              closeBtn: 0
+            })
+          }
+        },
+        error: function(error) {
+          $(".updataBtn").removeAttr("disabled");
+          layer.alert('Sever Error!', {
+            icon: 2,
+            title: 'Error',
+            closeBtn: 0,
+            btn: 'OK'
+          });
+          $(".updataBtn").removeAttr("disabled");
+        },
+        complete: function() {
+          $(".updataBtn").removeAttr("disabled");
+        }
+      });
+      return false;
+    });
+  });
+</script></html>
